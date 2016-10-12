@@ -1,1 +1,16 @@
-Hello World!
+---
+layout: default
+title: .a.d.f.c.o.s.e.
+---
+
+<div id="home">
+	<h2>Blogeinträge</h2>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li class="posts">
+			<a class="posttitle" href="{{ post.url }}">{{ post.title }}</a>
+			{{ post.exerpt }}
+		</li>
+		{% endfor %}
+	</ul>
+</div>

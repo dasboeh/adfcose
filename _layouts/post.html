@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="post">
+	{{ content }}
+</div>
+
+<div id="related">
+	<h3>Möglichrweise auch interessant:</h3>
+	<ul class="posts">
+		{% for post in site.related_posts limit:3 %}
+		<li>
+			<a class="posttitle" href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
